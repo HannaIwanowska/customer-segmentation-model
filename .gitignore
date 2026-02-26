@@ -1,0 +1,16 @@
+# Pliki systemowe i Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Środowiska wirtualne
+venv/
+env/
+.env/
+
+# Dane
+data/
+*.csv
+*.tsv
+*.xlsx
