@@ -41,11 +41,13 @@ The dataset was highly imbalanced (~15% positive responses). To predict campaign
 
 Strategic optimization and the choice of the final model depend on the company's business strategy:
 * 🛡️ **Cost-Saving Strategy (Random Forest tuned for High Precision):** Maximizes precision (80%) and minimizes false positives (only 10 errors). Perfect if the marketing budget is strictly limited, though it reaches fewer interested customers (Recall: 39%).
-![alt text](images/rf_confusion_matrix.png)
+ 
+![alt text](images/rf_confusion_matrix.png)  
 *Random Forest Confusion Matrix*
 
 * 🚀 **Growth Strategy (XGBoost tuned for F1-Score / High Recall):** The recommended model. It captures nearly 70% of all genuinely interested customers with an acceptable precision of 57%, ultimately maximizing the overall revenue potential.
-![alt text](images/xgb_confusion_matrix.png)
+
+![alt text](images/xgb_confusion_matrix.png)  
 *XGBoost Confusion Matrix*
 
 
@@ -66,6 +68,7 @@ This confirms that behavioral profiling significantly outperforms traditional de
 * Spending data was aggregated over 2 years with no timestamps, preventing time-series analysis of purchase frequency or churn detection.
 
 ## 📁 Project structure
+```
 ├── images/                                       # Generated plots and confusion matrices
 ├── notebooks/ 
 │   ├── 01_exploration_and_experiments.ipynb      # Raw EDA and model testing
@@ -73,10 +76,5 @@ This confirms that behavioral profiling significantly outperforms traditional de
 ├── .gitignore
 ├── README.md                                     # Project overview
 └── requirements.txt                              # Dependencies
+```
 
-## 🚀 How to Run
-1. Clone the repository: git clone [Your-GitHub-Link]
-2. Create virtual environment: python -m venv venv and activate it.
-3. Install dependencies: pip install -r requirements.txt
-4. Download the dataset from Kaggle and place it in the data/ folder.
-5. Run the Jupyter Notebooks in notebooks/ to see the full analysis.
